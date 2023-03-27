@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+  mysql:
+    build: ./mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+  cmc-proxy:
+    build: ./cmc-proxy
+    ports:
+      - "8080:8080"
+    environment:
+      - API_KEY=${CMC_API_KEY}
+    env_file: .env
