@@ -10,7 +10,7 @@ services:
       - "traefik.http.routers.site.rule=Host(`app.localhost`)"
     depends_on:
       - traefik
-      - api
+      - backend
 
   mysql:
     image: mariadb:10.6
