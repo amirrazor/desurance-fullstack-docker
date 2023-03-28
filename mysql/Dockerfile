@@ -1,0 +1,9 @@
+FROM mysql:latest
+ENV MYSQL_SERVER_HOST=localhost
+ENV MYSQL_SERVER_PORT=3306
+ENV MYSQL_SERVER_TYPE=mysql
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=
+ENV MYSQL_DATABASE=desurance
+EXPOSE 3306
+COPY init.sql /docker-entrypoint-initdb.d/

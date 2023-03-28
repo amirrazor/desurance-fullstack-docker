@@ -1,0 +1,45 @@
+#login{
+    display: none;
+}
+
+#choose{
+    display: none;
+}
+
+#terms{
+    display: none;
+}
+
+#calc{
+    display: none;
+}
+
+#info{
+    display: none;
+}
+
+#review{
+    display: none;
+}
+
+#payment{
+    display: none;
+}
+
+#adminPanel{
+    display: none;
+}
+
+#userPanel{
+    display: none;
+}
+
+#reviewClaimPanel{
+    display: none;
+}
+
+
+
+.pointcursor {
+    cursor:pointer;
+}
