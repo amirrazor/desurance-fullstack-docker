@@ -1,6 +1,5 @@
-FROM node:14.17-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-CMD ["npm", "start"]
+FROM node:current-alpine
+RUN mkdir -p /var/www/html
+WORKDIR /var/www/html
+EXPOSE 8081
+CMD ["npm", "run", "serve"]
