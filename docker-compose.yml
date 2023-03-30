@@ -34,7 +34,7 @@ services:
     volumes:
       - ./backend:/var/www/html
     labels:
-      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/api`))"
+      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/backend`))"
     depends_on:
       - traefik
       - mysql
@@ -48,9 +48,15 @@ services:
       - traefik
   traefik:
     image: traefik:v2.9
-    command: --api.insecure=true --providers.docker
+    command: 
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.file.directory=/etc/traefik/dynamic"
     ports:
       - "80:80"
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik.yml:/etc/traefik/traefik.yml
+      - ./dynamic_conf:/etc/traefik/dynamic
