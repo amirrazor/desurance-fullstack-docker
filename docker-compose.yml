@@ -11,6 +11,7 @@ services:
     depends_on:
       - traefik
       - backend
+      - mysql
 
   mysql:
     image: mariadb:10.6
@@ -40,10 +41,11 @@ services:
   cmc-proxy:
     build: ./cmc-proxy
     ports:
-      - "8082:8082"
-    environment:
-      - API_KEY=${CMC_API_KEY}
-    env_file: .env
+      - "8083:8083"
+    labels:
+      - "traefik.http.routers.cmc-proxy.rule=(Host(`app.localhost`) && PathPrefix(`/cmc-proxy`))"
+    depends_on:
+      - traefik
   traefik:
     image: traefik:v2.9
     command: --api.insecure=true --providers.docker

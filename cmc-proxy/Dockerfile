@@ -1,6 +1,8 @@
-FROM node:14.17-alpine
+FROM node:16-alpine
+RUN mkdir -p /app
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-CMD ["node", "app.js"]
+EXPOSE 8083
+CMD ["npm", "run", "start"]
