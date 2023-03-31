@@ -52,7 +52,6 @@ services:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
-      - "--providers.file.directory=/etc/traefik/dynamic"
     ports:
       - "80:80"
       - "8081:8080"
