@@ -1,10 +1,10 @@
 <?php 
 
 $servertype = "mysql";
-$servername = "localhost";
-$serverport = 3307;
-$username = "root";
-$password = "";
+$servername = "mysql";
+$serverport = 3306;
+$username = "razor";
+$password = "secret";
 $dbname = "desurance";
 $tablename = "users";
 $claim_table = "claims";
