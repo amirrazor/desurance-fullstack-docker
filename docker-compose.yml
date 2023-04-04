@@ -29,11 +29,6 @@ services:
     environment:
       - PMA_HOST=mysql
 
-  onchain-backend:
-    build: ./onchain-backend
-    ports:
-      - "8085:8085"
-
 
   cmc-proxy:
     build: ./cmc-proxy
