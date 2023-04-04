@@ -1,24 +1,25 @@
 version: '3'
 services:
-  frontend:
-    build: ./frontend
+  src:
+    build: ./src
     ports:
       - "8081:8081"
     volumes:
-      - ./frontend:/var/www/html
+      - ./src:/var/www/html
     labels:
-      - "traefik.http.routers.site.rule=Host(`app.localhost`)"
+      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/src`))"
     depends_on:
       - traefik
-      - backend
       - mysql
+
+
 
   mysql:
     image: mariadb:10.6
     restart: unless-stopped
     tty: true
     ports:
-      - "3307:3306"
+      - "3307:3307"
     environment:
       MYSQL_DATABASE: desurance
       MYSQL_USER: root
@@ -27,25 +28,18 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
 
-  backend:
-    build: ./backend
-    ports:
-      - "8082:8082"
-    volumes:
-      - ./backend:/var/www/html
-    labels:
-      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/backend`))"
-    depends_on:
-      - traefik
-      - mysql
+  
   cmc-proxy:
     build: ./cmc-proxy
     ports:
-      - "8083:8083"
+      - "8082:8082"
     labels:
       - "traefik.http.routers.cmc-proxy.rule=(Host(`app.localhost`) && PathPrefix(`/cmc-proxy`))"
     depends_on:
       - traefik
+
+
+
   traefik:
     image: traefik:v2.9
     command: 

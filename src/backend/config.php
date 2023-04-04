@@ -2,7 +2,7 @@
 
 $servertype = "mysql";
 $servername = "localhost";
-$serverport = 3306;
+$serverport = 3307;
 $username = "root";
 $password = "";
 $dbname = "desurance";
