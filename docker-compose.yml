@@ -1,5 +1,9 @@
 version: '3'
 services:
+
+
+
+
   src:
     build: ./src
     ports:
@@ -27,6 +31,18 @@ services:
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+
+
+
+  onchain-backend:
+    build: ./onchain-backend
+    ports:
+      - "8085:8085"
+    labels:
+      - "traefik.http.routers.onchain-backend.rule=(Host(`app.localhost`) && PathPrefix(`/onchain-backend`))"
+    depends_on:
+      - traefik
+  
 
   
   cmc-proxy:
