@@ -4,16 +4,13 @@ services:
 
 
 
-  src:
-    build: ./src
+  website:
+    build: ./website
     ports:
       - "8081:8081"
     volumes:
-      - ./src:/var/www/html
-    labels:
-      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/src`))"
+      - ./website:/var/www/html
     depends_on:
-      - traefik
       - mysql
 
 
@@ -44,7 +41,7 @@ services:
       - traefik
   
 
-  
+
   cmc-proxy:
     build: ./cmc-proxy
     ports:
