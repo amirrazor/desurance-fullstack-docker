@@ -97,7 +97,7 @@
                                 <div class="row d_flex">
                                     <div class="col-md-6">
                                         <div class="text-bg">
-                                            <h1>Decentralized Insurance for EVERYONE</h1>
+                                            <h1>Decentralized Insurance for EVERYONEe</h1>
                                             <p>Get our phone insurance policy using Ethereum right now! All you need is
                                                 a Metamask wallet
                                                 and some Ethereum stored!</p>
@@ -117,7 +117,8 @@
                             </div>
 
                         </section>
-
+                        <?php include "includes/footer.php" ?>
                     </div>
         </header>
+
         </div>

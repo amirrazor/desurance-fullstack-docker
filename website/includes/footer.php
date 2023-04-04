@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer id="main-footer" class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 
@@ -95,34 +95,23 @@
                     mb-4">
 
 
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://www.linkedin.com/in/amir-razaghkhah-3a654923b/"
-                        target="_blank"><i
-                            class="fab fa-linkedin-in my-text-primary"></i></a>
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://www.instagram.com/crypto.with.amir/"
-                        target="_blank"><i
-                            class="fab fa-instagram text-warning"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/amir-razaghkhah-3a654923b/"
+            target="_blank"><i class="fab fa-linkedin-in my-text-primary"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://www.instagram.com/crypto.with.amir/" target="_blank"><i
+                class="fab fa-instagram text-warning"></i></a>
 
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://www.youtube.com/channel/UCo1_p4Z1XELqyTCp_VBt6Aw"
-                        target="_blank"><i
-                            class="fab fa-youtube text-danger"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://www.youtube.com/channel/UCo1_p4Z1XELqyTCp_VBt6Aw"
+            target="_blank"><i class="fab fa-youtube text-danger"></i></a>
 
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://twitter.com/CryptoWithAmir"
-                        target="_blank"><i
-                            class="fab fa-twitter text-info"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://twitter.com/CryptoWithAmir" target="_blank"><i
+                class="fab fa-twitter text-info"></i></a>
 
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://github.com/amirrazor" target="_blank">
-                        <i class="fab fa-github text-dark"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://github.com/amirrazor" target="_blank">
+            <i class="fab fa-github text-dark"></i></a>
 
-                    <a class="btn btn-light btn-social"
-                        href="mailto:cryptowithamir@gmail.com"
-                        target="_blank">
-                        <i class="fas fa-envelope text-success"></i></a>
-                </div>
+        <a class="btn btn-light btn-social" href="mailto:cryptowithamir@gmail.com" target="_blank">
+            <i class="fas fa-envelope text-success"></i></a>
+    </div>
     <!-- Right -->
     <!-- Copyright -->
     <div class="text-center p-4 bg-primary">

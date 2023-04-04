@@ -53,6 +53,6 @@
             </div>
         </div>
     </div>
-
+    <?php include "includes/footer.php" ?>
 </div>
 <!-- end login -->
