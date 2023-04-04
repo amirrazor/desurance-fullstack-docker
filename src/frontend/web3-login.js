@@ -209,7 +209,7 @@ async function userLogin() {
               if (response.data[0] == "Success") {
                 //if not admin
                 if (
-                  publicAddress != "0x7d19cfc5b03cbe0640187a111b981a807a544f26"
+                  publicAddress != "0x822a5Ed5197536b4b355C0eBea5e7f0f89552b01"
                 ) {
                   userLoginData.state = "loggedIn";
                   showMsg(userLoginData.state);
@@ -681,7 +681,8 @@ function setClaim() {
   let valueFullName = document.getElementById("updateFullname").value;
   let valueClaimTitle = document.getElementById("claimTitle").value;
   let valueClaimContent = document.getElementById("claimContent").value;
-  axios.post(
+  axios
+    .post(
       backendPath + "backend/server.php",
       {
         request: "setClaim",
@@ -695,17 +696,15 @@ function setClaim() {
     )
     .then(function (response) {
       console.log(response.data);
-        document.getElementById("claimSuccessful").textContent =
-    "Claim has been successfully sent";
-  document.getElementById("claimNotice").textContent =
-    "Please log in later to see changes to your claim's status";
+      document.getElementById("claimSuccessful").textContent =
+        "Claim has been successfully sent";
+      document.getElementById("claimNotice").textContent =
+        "Please log in later to see changes to your claim's status";
     })
     .catch(function (error) {
       console.error(error.response.data);
-      document.getElementById("claimNotice").textContent =
-    "Claim was not sent";
+      document.getElementById("claimNotice").textContent = "Claim was not sent";
     });
-
 }
 
 function getClaim() {
@@ -881,7 +880,7 @@ function getClaimAdmin() {
 
       document.getElementById("claimReviewSingle").innerHTML = tableTagSingle;
       fetch("https://proxy.desurance.de:3009/")
-       .then((response) => response.json())
+        .then((response) => response.json())
         .then((data) => {
           const jsonClaim = data.data.quote[2790].price;
           console.log(jsonClaim);
