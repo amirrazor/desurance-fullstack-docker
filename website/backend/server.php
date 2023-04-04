@@ -247,9 +247,6 @@ if ($request == "updatePublicName") {
   $publicName = $data->publicName;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET publicName = ? WHERE address = '".$address."'");
@@ -267,9 +264,7 @@ if ($request == "userPaid") {
   $userPaid = $data->userPaid;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET userPaid = ? WHERE address = '".$address."'");
@@ -287,9 +282,7 @@ if ($request == "updateFullname") {
   $fullName = $data->fullName;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET fullName = ? WHERE address = '".$address."'");
@@ -307,9 +300,7 @@ if ($request == "updateHomeaddress") {
   $homeAddress = $data->homeAddress;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET homeAddress = ? WHERE address = '".$address."'");
@@ -327,9 +318,7 @@ if ($request == "updatePhonemodel") {
   $phoneModel = $data->phoneModel;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET phoneModel = ? WHERE address = '".$address."'");
@@ -347,9 +336,7 @@ if ($request == "updateEmail") {
   $email = $data->email;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET email = ? WHERE address = '".$address."'");
@@ -367,9 +354,7 @@ if ($request == "updatePhonenumber") {
   $phoneNumber = $data->phoneNumber;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET phoneNumber = ? WHERE address = '".$address."'");
@@ -387,9 +372,7 @@ if ($request == "updateThief") {
   $thief = $data->thief;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET thief = ? WHERE address = '".$address."'");
@@ -407,9 +390,7 @@ if ($request == "updatePayinterval") {
   $payInterval = $data->payInterval;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET payInterval = ? WHERE address = '".$address."'");
@@ -427,9 +408,7 @@ if ($request == "updatePhoneage") {
   $phoneAge = $data->phoneAge;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET phoneAge = ? WHERE address = '".$address."'");
@@ -449,9 +428,7 @@ if ($request == "updatePhoneprice") {
   $phoneprice = $data->phoneprice;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET phonePrice = ? WHERE address = '".$address."'");
@@ -469,9 +446,7 @@ if ($request == "updatePremiumprice") {
   $premiumPrice = $data->premiumPrice;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET premiumPrice = ? WHERE address = '".$address."'");
@@ -511,9 +486,7 @@ if ($request == "changePublicName"){
   $publicName = $data->publicName;
   $address = $data->address;
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("UPDATE $tablename SET publicName = ? WHERE address = '".$address."'");
@@ -537,9 +510,7 @@ if ($request == "changePublicName"){
      
 
 
-  // Check if the user is logged in
-  try { $JWT = JWT::decode($data->JWT, $GLOBALS['JWT_secret']); }
-  catch (\Exception $e) { echo 'Authentication error'; exit; }
+
 
   // Prepared statement to protect against SQL injections
   $stmt = $conn->prepare("INSERT INTO claims (user_address,

@@ -19,6 +19,7 @@ services:
       MYSQL_DATABASE: desurance
       MYSQL_USER: razor
       MYSQL_PASSWORD: secret
+      TZ: Europe/Berlin
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

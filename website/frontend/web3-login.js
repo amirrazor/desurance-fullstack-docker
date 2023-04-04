@@ -268,6 +268,7 @@ async function userLogin() {
                   if (userLoginData.userPaid == "Paid") {
                     getUserPaid();
                   }
+                  console.log(response.data[2]);
                   userLoginData.JWT = response.data[2];
 
                   // Clear Web3 wallets data for logout
@@ -329,6 +330,7 @@ function showPublicName() {
 
 function setPublicName() {
   let value = document.getElementById("updatePublicName").value;
+  console.log("JWT:", userLoginData.JWT);
   axios
     .post(
       backendPath + "backend/server.php",
@@ -342,6 +344,7 @@ function setPublicName() {
     )
     .then(function (response) {
       console.log(response.data);
+      console.log(userLoginData.JWT);
     })
     .catch(function (error) {
       console.error(error);
