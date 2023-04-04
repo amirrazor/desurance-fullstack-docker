@@ -24,7 +24,8 @@
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/spa.css">
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
@@ -103,7 +104,7 @@
                                                 and some Ethereum stored!</p>
                                             <h2 class="text-warning">Notice!! This is only a test project and works with
                                                 Goerli Test Network
-                                                and test money. This project was made for my Master's Thesis :)</h2>
+                                                and test money. This project was made for my Master's Thesis</h2>
                                             <button onclick="homeToLogin()" class="read_more btn btn-default">Get
                                                 Started</button>
                                         </div>
