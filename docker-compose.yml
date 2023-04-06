@@ -16,7 +16,7 @@ services:
     image: mysql:8.0
     restart: unless-stopped
     tty: true
-    command: --init-file /docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password --init-file /docker-entrypoint-initdb.d/init.sql
     volumes:
       - ./mysql:/docker-entrypoint-initdb.d
     ports:
