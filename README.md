@@ -1,19 +1,5 @@
 # Decentralized insurance protocol with the use of Docker Compose and Traefik
 
-This project is under construction and will be regularly updated.
+This project makes use of the ethereum's test-net Goerli, and smart contracts to make a decentralized insurance platform possible. Docker-compose and traefik are used to run and manage the project locally.
 
-
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
